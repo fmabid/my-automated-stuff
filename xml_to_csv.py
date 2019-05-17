@@ -3,7 +3,8 @@ from xml.etree import ElementTree
 import glob
 import pandas
 
-TRAINING_DATA_DIR = ''
+# paste here the pathe to the directory of XML files
+XML_DATA_DIR = ''
 
 # create the csv writer object
 def xml_to_csv(path):
@@ -26,14 +27,14 @@ def xml_to_csv(path):
 # end function
 
 
-TRAIN_CSV_FILE = '/home/abid/PycharmProjects/cropsModel/TestModes/data/train/' + 'train_labels.csv'
+PATH_CSV_FILE = '/home/abid/PycharmProjects/cropsModel/TestModes/data/train/' + 'train_labels.csv'
 
 
 if __name__ == "__main__":
 
-    if TRAINING_DATA_DIR == '':
+    if XML_DATA_DIR == '':
         print("Define the path to directory at 'TRAINING_DATA_DIR'")
         exit()
     else:
-        train_csv_data = xml_to_csv(TRAINING_DATA_DIR)
-        train_csv_data.to_csv(TRAIN_CSV_FILE, index=None)
+        train_csv_data = xml_to_csv(XML_DATA_DIR)
+        train_csv_data.to_csv(PATH_CSV_FILE, index=None)
