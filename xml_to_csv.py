@@ -26,8 +26,9 @@ def xml_to_csv(path):
     return xml_df
 # end function
 
-
-PATH_CSV_FILE = '/home/abid/PycharmProjects/cropsModel/TestModes/data/train/' + 'train_labels.csv'
+# paste the path to `DIR_to_SAVE`, where to save the file
+DIR_to_SAVE = ''
+PATH_CSV_FILE = DIR_to_SAVE + 'train_labels.csv'
 
 
 if __name__ == "__main__":
